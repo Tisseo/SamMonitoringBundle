@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monitoring>
+    <application name="{{ monitoring.applicationName }}" state="{{ monitoring.applicationState }}"></application>
+    {% for category in monitoring.categories %}
+        <monitoredCategories>
+            {% for itemCategory in category.itemCategories %}
+                <monitoredCategoryItem>
+                    <name>{{ itemCategory.name }}</name>
+                    {% for service in itemCategory.services %}
+                        <Service>
+                            <state>{{ service.state }}</state>
+                            <name>{{ service.name }}</name>
+                        </Service>
+                    {% endfor %}
+                </monitoredCategoryItem>
+            {% endfor %}
+        </monitoredCategories>
+    {% endfor %}
+</monitoring>

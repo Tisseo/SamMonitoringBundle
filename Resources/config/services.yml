@@ -1,0 +1,7 @@
+parameters:
+    sam_monitoring_manager.class: CanalTP\SamMonitoringBundle\Service\MonitoringManager
+
+services:
+    sam_monitoring_manager:
+        class: %sam_monitoring_manager.class%
+        arguments: [@service_container]

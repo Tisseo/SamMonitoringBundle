@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "canaltp/sam-monitoring": "0.0.3"
+        "canaltp/sam-monitoring": "dev-master"
     },
     "autoload": {
         "psr-0": { "CanalTP\\SamMonitoringBundle\\": "" }

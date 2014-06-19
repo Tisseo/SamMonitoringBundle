@@ -1,0 +1,32 @@
+{
+    "name": "canaltp/sam-monitoring-bundle",
+    "type": "symfony-bundle",
+    "description": "Sam Monitoring Bundle",
+    "keywords": [],
+    "homepage": "http://hg.prod.canaltp.fr/sam/SamMonitoringBundle.git",
+    "license": "MIT",
+    "authors": [
+	{
+            "name": "Kévin Ziemianski",
+            "email": "kevin.ziemianski@canaltp.fr"
+	},
+        {
+            "name": "Rémy Abi-Khalil",
+            "email": "remy.abikhalil@canaltp.fr"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "packagist.canaltp.fr"
+        }
+    ],
+    "require": {
+        "canaltp/sam-monitoring": "0.0.3"
+    },
+    "autoload": {
+        "psr-0": { "CanalTP\\SamMonitoringBundle\\": "" }
+    },
+    "target-dir": "CanalTP/SamMonitoringBundle/"
+}
+

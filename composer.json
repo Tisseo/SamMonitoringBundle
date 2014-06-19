@@ -25,7 +25,7 @@
         "canaltp/sam-monitoring": "dev-master"
     },
     "autoload": {
-        "psr-0": { "CanalTP\\SamMonitoringBundle\\": "" }
+        "psr-4": { "CanalTP\\SamMonitoringBundle\\": "" }
     },
     "target-dir": "CanalTP/SamMonitoringBundle/"
 }

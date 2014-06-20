@@ -17,10 +17,9 @@ class MonitoringController extends Controller
         try {
             $mM = $this->container->get('sam_monitoring_manager');
             $monitoring = $mM->getMonitoringForApp($application);
-            throw new \Exception();
         } catch (\Exception $ex) {
             $monitoring['applicationName'] = $application;
-            $monitoring['applicationState'] = 'DOWN';
+            $monitoring['applicationState'] = \CanalTP\SamMonitoringComponent\MonitoringStateInterface::UNKNOWN;
             
             $reponse = $this->render('CanalTPSamMonitoringBundle::index.' . $format . '.twig', array('monitoring' => $monitoring));
             $reponse->headers->set('Content-Type', 'text/' . $format);

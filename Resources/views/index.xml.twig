@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monitoring>
-    <application name="{{ monitoring.applicationName }}" state="{{ monitoring.applicationState }}"></application>
-    {% for category in monitoring.categories %}
-        <monitoredCategories>
-            {% for itemCategory in category.itemCategories %}
-                <monitoredCategoryItem>
-                    <name>{{ itemCategory.name }}</name>
-                    {% for service in itemCategory.services %}
-                        <Service state="{{ service.state }}" name="{{ service.name }}"
-                    {% endfor %}
-                </monitoredCategoryItem>
-            {% endfor %}
-        </monitoredCategories>
-    {% endfor %}
+    <application name="{{ monitoring.name }}" state="{{ monitoring.state }}"></application>
+    <categories>
+        {% for itemCategory in monitoring.categories %}
+            <item>
+                <name>{{ itemCategory.name }}</name>
+                {% for service in itemCategory.services %}
+                    <Service state="{{ service.state }}" name="{{ service.name }}" message="{{ service.message }}"/>
+                {% endfor %}
+            </item>
+        {% endfor %}
+    </categories>
 </monitoring>

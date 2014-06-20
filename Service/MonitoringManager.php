@@ -16,7 +16,7 @@ class MonitoringManager
         $this->container = $container;
     }
     
-    public function getMonitoringForApp($application)
+    public function getComponentByApp($application)
     {
         if (!$this->container->has('sam.business_monitoring.' . $application)) {
             return null;
@@ -25,5 +25,15 @@ class MonitoringManager
         $monitoring = $this->container->get('sam.business_monitoring.' . $application);
         
         return $monitoring;
+    }
+    
+    public function addService($service, $application, $category)
+    {
+        $component = $this->getComponentByApp($application);
+        if (is_null($component)) return;
+        
+        $category = $component->getCategoryByName($category);
+        
+        $category->addService($service);
     }
 }

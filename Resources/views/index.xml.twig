@@ -3,12 +3,11 @@
     <application name="{{ monitoring.name }}" state="{{ monitoring.state }}"></application>
     <categories>
         {% for itemCategory in monitoring.categories %}
-            <item>
-                <name>{{ itemCategory.name }}</name>
+            <category name="{{ itemCategory.name }}">
                 {% for service in itemCategory.services %}
-                    <Service state="{{ service.state }}" name="{{ service.name }}" message="{{ service.message }}"/>
+                    <service state="{{ service.state }}" name="{{ service.name }}" message="{{ service.message }}"/>
                 {% endfor %}
-            </item>
+            </category>
         {% endfor %}
     </categories>
 </monitoring>

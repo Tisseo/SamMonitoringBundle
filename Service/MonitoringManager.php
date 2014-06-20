@@ -18,11 +18,11 @@ class MonitoringManager
     
     public function getMonitoringForApp($application)
     {
-        if (!$this->container->has($application.'-monitoring')) {
+        if (!$this->container->has('sam.business_monitoring.' . $application)) {
             return null;
         }
         
-        $monitoring = $this->container->get($application.'-monitoring');
+        $monitoring = $this->container->get('sam.business_monitoring.' . $application);
         
         return $monitoring;
     }

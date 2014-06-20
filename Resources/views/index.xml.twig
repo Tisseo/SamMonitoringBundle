@@ -7,10 +7,7 @@
                 <monitoredCategoryItem>
                     <name>{{ itemCategory.name }}</name>
                     {% for service in itemCategory.services %}
-                        <Service>
-                            <state>{{ service.state }}</state>
-                            <name>{{ service.name }}</name>
-                        </Service>
+                        <Service state="{{ service.state }}" name="{{ service.name }}"
                     {% endfor %}
                 </monitoredCategoryItem>
             {% endfor %}

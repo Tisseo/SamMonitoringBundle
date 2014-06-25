@@ -3,6 +3,7 @@ parameters:
     sam.service_monitoring.database.psql.class: CanalTP\SamMonitoringComponent\Service\Database\Psql
     sam.service_monitoring.http.rest.class: CanalTP\SamMonitoringComponent\Service\Http\Rest
     sam.service_monitoring.message_broker.rabbit_mq.class: CanalTP\SamMonitoringComponent\Service\MessageBroker\RabbitMq
+    sam.service_monitoring.media_manager.class: CanalTP\SamMonitoringComponent\Service\MediaManager\MediaManager
 
 services:
     sam_monitoring_manager:

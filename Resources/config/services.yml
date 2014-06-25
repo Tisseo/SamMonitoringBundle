@@ -1,6 +1,8 @@
 parameters:
     sam_monitoring_manager.class: CanalTP\SamMonitoringBundle\Service\MonitoringManager
-
+    sam.service_monitoring.database.psql.class: CanalTP\SamMonitoringComponent\Service\Database\Psql
+    sam.service_monitoring.database.rest.class: CanalTP\SamMonitoringComponent\Service\Http\Rest
+    
 services:
     sam_monitoring_manager:
         class: %sam_monitoring_manager.class%

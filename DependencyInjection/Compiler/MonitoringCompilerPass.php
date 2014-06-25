@@ -28,7 +28,7 @@ class MonitoringCompilerPass implements CompilerPassInterface
                     if (isset($value['category'])) {
                         $definition->addMethodCall(
                             'addService',
-                            array(new Reference($id), $application, $value['category'])
+                            array(new Reference($id), strtolower($application), strtolower($value['category']))
                         );
                     }
                 }

@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Sam Monitoring Bundle",
     "keywords": [],
-    "homepage": "http://hg.prod.canaltp.fr/sam/SamMonitoringBundle.git",
+    "homepage": "https://github.com/CanalTP/SamMonitoringBundle",
     "license": "MIT",
     "authors": [
 	{

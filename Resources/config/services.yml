@@ -8,4 +8,4 @@ parameters:
 services:
     sam_monitoring_manager:
         class: %sam_monitoring_manager.class%
-        arguments: [@service_container]
+        arguments: ['@service_container']

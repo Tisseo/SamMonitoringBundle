@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "canaltp/sam-monitoring": "~2.8"
+        "canaltp/sam-monitoring": "~3.4"
     },
     "autoload": {
         "psr-4": { "CanalTP\\SamMonitoringBundle\\": "" }
